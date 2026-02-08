@@ -2,7 +2,7 @@
 
 Landing page oficial da equipe de corrida **Quarteto Fantástico**.
 
-![Logo Quarteto Fantástico](assets/images/logo.jpg)
+![Logo Quarteto Fantástico](assets/images/logo-verde.png)
 
 ## 🏃 Sobre o Projeto
 
