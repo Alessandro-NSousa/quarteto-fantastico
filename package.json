@@ -1,0 +1,15 @@
+{
+  "name": "quarteto-fantastico-landing",
+  "version": "1.0.0",
+  "description": "Landing page da equipe de corrida Quarteto Fantástico",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./css/input.css -o ./css/output.css --watch",
+    "build": "npx tailwindcss -i ./css/input.css -o ./css/output.css --minify"
+  },
+  "keywords": ["landing-page", "corrida", "esportes"],
+  "author": "Quarteto Fantástico",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

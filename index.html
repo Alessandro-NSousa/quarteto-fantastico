@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quarteto Fantástico - Equipe de corrida dedicada à velocidade, união e superação a cada quilômetro. Conheça nossa história, integrantes e próximos eventos.">
+  <title>Quarteto Fantástico - Equipe de Corrida</title>
+  
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="css/output.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="font-sans">
+  
+  <!-- Header/Navigation -->
+  <header class="fixed w-full top-0 z-50 bg-quarteto-blue/95 backdrop-blur-sm shadow-lg">
+    <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img src="assets/images/logo-verde.png" alt="Logo Quarteto Fantástico" class="h-12 w-auto rounded-lg">
+        <span class="text-quarteto-green font-bold text-xl hidden sm:inline">Quarteto Fantástico</span>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-quarteto-green focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+      
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 text-sm lg:text-base">
+        <li><a href="#inicio" class="hover:text-quarteto-green transition">Início</a></li>
+        <li><a href="#sobre" class="hover:text-quarteto-green transition">Sobre</a></li>
+        <li><a href="#equipe" class="hover:text-quarteto-green transition">Equipe</a></li>
+        <li><a href="#eventos" class="hover:text-quarteto-green transition">Eventos</a></li>
+        <li><a href="#galeria" class="hover:text-quarteto-green transition">Galeria</a></li>
+        <li><a href="#contato" class="hover:text-quarteto-green transition">Contato</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-quarteto-blue-light">
+      <ul class="flex flex-col space-y-4 px-4 py-6">
+        <li><a href="#inicio" class="block hover:text-quarteto-green transition">Início</a></li>
+        <li><a href="#sobre" class="block hover:text-quarteto-green transition">Sobre</a></li>
+        <li><a href="#equipe" class="block hover:text-quarteto-green transition">Equipe</a></li>
+        <li><a href="#eventos" class="block hover:text-quarteto-green transition">Eventos</a></li>
+        <li><a href="#galeria" class="block hover:text-quarteto-green transition">Galeria</a></li>
+        <li><a href="#contato" class="block hover:text-quarteto-green transition">Contato</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    
+    <!-- Hero Section -->
+    <section id="inicio" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+      <!-- Background with gradient overlay -->
+      <div class="absolute inset-0 bg-gradient-to-br from-quarteto-blue via-quarteto-blue-light to-quarteto-blue">
+        <!-- Decorative elements -->
+        <div class="absolute top-20 right-10 w-72 h-72 bg-quarteto-green/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-10 w-96 h-96 bg-quarteto-green/5 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 relative z-10 text-center">
+        <div class="max-w-4xl mx-auto">
+          <!-- Logo -->
+          <div class="mb-8 flex justify-center">
+            <img src="assets/images/logo-verde.png" alt="Logo Quarteto Fantástico" class="w-48 h-auto md:w-64 object-contain transform hover:scale-105 transition-transform duration-300">
+          </div>
+          
+          <!-- Heading -->
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <span class="text-white">Quarteto</span>
+            <span class="text-quarteto-green"> Fantástico</span>
+          </h1>
+          
+          <!-- Tagline -->
+          <p class="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 font-light">
+            Velocidade, união e superação a cada quilômetro
+          </p>
+          
+          <!-- Icon row -->
+          <div class="flex justify-center space-x-8 mb-12 text-quarteto-green">
+            <div class="text-center">
+              <i class="fas fa-running text-4xl mb-2"></i>
+              <p class="text-sm">Paixão</p>
+            </div>
+            <div class="text-center">
+              <i class="fas fa-trophy text-4xl mb-2"></i>
+              <p class="text-sm">Vitórias</p>
+            </div>
+            <div class="text-center">
+              <i class="fas fa-users text-4xl mb-2"></i>
+              <p class="text-sm">União</p>
+            </div>
+          </div>
+          
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#sobre" class="btn-primary inline-block">
+              Conheça a Equipe
+            </a>
+            <a href="#eventos" class="btn-secondary inline-block">
+              Próximos Eventos
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#sobre" class="text-quarteto-green">
+          <i class="fas fa-chevron-down text-3xl"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Sobre a Equipe -->
+    <section id="sobre" class="py-20 bg-gradient-to-b from-quarteto-blue to-quarteto-blue-light">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <h2 class="section-title">Sobre o Quarteto Fantástico</h2>
+          <p class="section-subtitle">Nossa história de superação e união</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <!-- Text Content -->
+          <div class="space-y-6">
+            <p class="text-lg text-gray-300 leading-relaxed">
+              O <span class="text-quarteto-green font-semibold">Quarteto Fantástico</span> nasceu da união de quatro atletas apaixonados pela corrida, determinados a superar limites e alcançar novos horizontes no mundo do atletismo.
+            </p>
+            
+            <p class="text-lg text-gray-300 leading-relaxed">
+              Nossa equipe representa mais do que velocidade nas pistas. Somos sinônimo de <span class="text-quarteto-green font-semibold">disciplina, dedicação e espírito de equipe</span>. Cada treino, cada prova, cada quilômetro percorrido fortalece nossa união e nos aproxima de nossos objetivos.
+            </p>
+            
+            <div class="bg-quarteto-blue rounded-xl p-6 border-l-4 border-quarteto-green">
+              <h3 class="text-xl font-bold text-quarteto-green mb-3">Nossa Missão</h3>
+              <p class="text-gray-300">
+                Inspirar pessoas através do esporte, promovendo saúde, bem-estar e superação pessoal, 
+                incentivando a evolução contínua e a construção de histórias transformadoras.
+              </p>
+            </div>
+            
+            <div class="bg-quarteto-blue rounded-xl p-6 border-l-4 border-quarteto-green">
+              <h3 class="text-xl font-bold text-quarteto-green mb-3">Nossos Valores</h3>
+              <ul class="text-gray-300 space-y-2">
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-quarteto-green mr-3"></i>
+                  Trabalho em equipe e companheirismo
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-quarteto-green mr-3"></i>
+                  Disciplina e dedicação aos treinos
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-quarteto-green mr-3"></i>
+                  Superação de limites pessoais
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Stats/Highlights -->
+          <div class="space-y-6">
+            <div class="card text-center">
+              <i class="fas fa-medal text-5xl text-quarteto-green mb-4"></i>
+              <h3 class="text-4xl font-bold text-quarteto-green mb-2">25+</h3>
+              <p class="text-gray-300">Eventos Participados</p>
+            </div>
+            
+            <div class="card text-center">
+              <i class="fas fa-trophy text-5xl text-quarteto-green mb-4"></i>
+              <h3 class="text-4xl font-bold text-quarteto-green mb-2">12</h3>
+              <p class="text-gray-300">Pódios Conquistados</p>
+            </div>
+            
+            <div class="card text-center">
+              <i class="fas fa-route text-5xl text-quarteto-green mb-4"></i>
+              <h3 class="text-4xl font-bold text-quarteto-green mb-2">1500+</h3>
+              <p class="text-gray-300">Quilômetros Percorridos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integrantes da Equipe -->
+    <section id="equipe" class="py-20 bg-quarteto-blue">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <h2 class="section-title">Alguns De Nossos Atletas</h2>
+          <p class="section-subtitle">Conheça os membros do Quarteto Fantástico</p>
+        </div>
+        
+        <div class="max-w-6xl mx-auto relative">
+          <!-- Swiper Container -->
+          <div class="swiper teamSwiper pb-12">
+            <div class="swiper-wrapper">
+              <!-- Atleta 1 -->
+              <div class="swiper-slide">
+                <div class="card text-center group h-full">
+                  <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-quarteto-green to-quarteto-blue-light overflow-hidden border-4 border-quarteto-green/30 group-hover:border-quarteto-green transition-all duration-300">
+                    <img src="assets/images/fabiano-duarte.png" alt="Fabiano Duarte" class="w-full h-full object-cover">
+                  </div>
+                  <h3 class="text-xl font-bold text-quarteto-green mb-2">Fabiano Duarte</h3>
+                  <p class="text-sm text-gray-400 mb-3">Curta e Média Distância</p>
+                  <p class="text-sm text-gray-300 italic">"A vitória está na preparação"</p>
+                </div>
+              </div>
+              
+              <!-- Atleta 2 -->
+              <div class="swiper-slide">
+                <div class="card text-center group h-full">
+                  <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-quarteto-green to-quarteto-blue-light overflow-hidden border-4 border-quarteto-green/30 group-hover:border-quarteto-green transition-all duration-300">
+                    <img src="assets/images/mayra-danielle.png" alt="Mayra Danielle" class="w-full h-full object-cover">
+                  </div>
+                  <h3 class="text-xl font-bold text-quarteto-green mb-2">Mayra Danielle</h3>
+                  <p class="text-sm text-gray-400 mb-3">Curta Distância</p>
+                  <p class="text-sm text-gray-300 italic">"Cada passo é uma conquista"</p>
+                </div>
+              </div>
+              
+              <!-- Atleta 3 -->
+              <div class="swiper-slide">
+                <div class="card text-center group h-full">
+                  <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-quarteto-green to-quarteto-blue-light overflow-hidden border-4 border-quarteto-green/30 group-hover:border-quarteto-green transition-all duration-300">
+                    <img src="assets/images/allan-sousa.png" alt="Allan Sousa" class="w-full h-full object-cover">
+                  </div>
+                  <h3 class="text-xl font-bold text-quarteto-green mb-2">Allan Sousa</h3>
+                  <p class="text-sm text-gray-400 mb-3">Ultra Maratonista</p>
+                  <p class="text-sm text-gray-300 italic">"Resistir para conquistar"</p>
+                </div>
+              </div>
+              
+              <!-- Atleta 4 -->
+              <div class="swiper-slide">
+                <div class="card text-center group h-full">
+                  <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-quarteto-green to-quarteto-blue-light overflow-hidden border-4 border-quarteto-green/30 group-hover:border-quarteto-green transition-all duration-300">
+                    <img src="assets/images/franciane-carvalho.png" alt="Franciane Carvalho" class="w-full h-full object-cover">
+                  </div>
+                  <h3 class="text-xl font-bold text-quarteto-green mb-2">Franciane Carvalho</h3>
+                  <p class="text-sm text-gray-400 mb-3">Curta Distância</p>
+                  <p class="text-sm text-gray-300 italic">"Desafios são oportunidades"</p>
+                </div>
+              </div>
+              
+              <!-- Atleta 5 -->
+              <div class="swiper-slide">
+                <div class="card text-center group h-full">
+                  <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-quarteto-green to-quarteto-blue-light overflow-hidden border-4 border-quarteto-green/30 group-hover:border-quarteto-green transition-all duration-300">
+                    <img src="assets/images/Justin-imports.png" alt="Justin Imports" class="w-full h-full object-cover">
+                  </div>
+                  <h3 class="text-xl font-bold text-quarteto-green mb-2">Justin Imports</h3>
+                  <p class="text-sm text-gray-400 mb-3">Curta Distância</p>
+                  <p class="text-sm text-gray-300 italic">"Velocidade com técnica "</p>
+                </div>
+              </div>
+              
+              <!-- Atleta 6 -->
+              <div class="swiper-slide">
+                <div class="card text-center group h-full">
+                  <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-quarteto-green to-quarteto-blue-light overflow-hidden border-4 border-quarteto-green/30 group-hover:border-quarteto-green transition-all duration-300">
+                    <img src="assets/images/luciana-oliver.png" alt="Luciana Oliver" class="w-full h-full object-cover">
+                  </div>
+                  <h3 class="text-xl font-bold text-quarteto-green mb-2">Luciana Oliver</h3>
+                  <p class="text-sm text-gray-400 mb-3">Trail Running</p>
+                  <p class="text-sm text-gray-300 italic">"Quilômetros de determinação"</p>
+                </div>
+              </div>
+              
+              <!-- Atleta 7 -->
+              <div class="swiper-slide">
+                <div class="card text-center group h-full">
+                  <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-quarteto-green to-quarteto-blue-light overflow-hidden border-4 border-quarteto-green/30 group-hover:border-quarteto-green transition-all duration-300">
+                    <img src="assets/images/jose-rodrigues.png" alt="José Rodrigues" class="w-full h-full object-cover">
+                  </div>
+                  <h3 class="text-xl font-bold text-quarteto-green mb-2">José Rodrigues</h3>
+                  <p class="text-sm text-gray-400 mb-3">Curta Distância</p>
+                  <p class="text-sm text-gray-300 italic">"Consistência leva à excelência"</p>
+                </div>
+              </div>
+              
+              <!-- Atleta 8 -->
+              <div class="swiper-slide">
+                <div class="card text-center group h-full">
+                  <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-quarteto-green to-quarteto-blue-light overflow-hidden border-4 border-quarteto-green/30 group-hover:border-quarteto-green transition-all duration-300">
+                    <img src="assets/images/janaina-gomes.png" alt="Janaina Gomes" class="w-full h-full object-cover">
+                  </div>
+                  <h3 class="text-xl font-bold text-quarteto-green mb-2">Janaina Gomes</h3>
+                  <p class="text-sm text-gray-400 mb-3">Curta Distância</p>
+                  <p class="text-sm text-gray-300 italic">"A natureza é minha pista "</p>
+                </div>
+              </div>
+              
+              <!-- Atleta 9 -->
+              <div class="swiper-slide">
+                <div class="card text-center group h-full">
+                  <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-quarteto-green to-quarteto-blue-light overflow-hidden border-4 border-quarteto-green/30 group-hover:border-quarteto-green transition-all duration-300">
+                    <img src="assets/images/jeferson-mesquita.png" alt="Jeferson Mesquita" class="w-full h-full object-cover">
+                  </div>
+                  <h3 class="text-xl font-bold text-quarteto-green mb-2">Jeferson Mesquita</h3>
+                  <p class="text-sm text-gray-400 mb-3">Curta Distância</p>
+                  <p class="text-sm text-gray-300 italic">"Evolução é fruto da persistência."</p>
+                </div>
+              </div>
+              <!-- Atleta 10 -->
+              <div class="swiper-slide">
+                <div class="card text-center group h-full">
+                  <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-quarteto-green to-quarteto-blue-light overflow-hidden border-4 border-quarteto-green/30 group-hover:border-quarteto-green transition-all duration-300">
+                    <img src="assets/images/wanessa-tavares.png" alt="Wanessa Tavares" class="w-full h-full object-cover">
+                  </div>
+                  <h3 class="text-xl font-bold text-quarteto-green mb-2">Wanessa Tavares</h3>
+                  <p class="text-sm text-gray-400 mb-3">Curta Distância</p>
+                  <p class="text-sm text-gray-300 italic">"A base do sucesso é a constância."</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Navigation Buttons -->
+            <div class="swiper-button-next !text-quarteto-green after:!text-2xl"></div>
+            <div class="swiper-button-prev !text-quarteto-green after:!text-2xl"></div>
+            
+            <!-- Pagination -->
+            <div class="swiper-pagination !bottom-0"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eventos e Participações -->
+    <section id="eventos" class="py-20 bg-gradient-to-b from-quarteto-blue-light to-quarteto-blue">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <h2 class="section-title">Eventos e Conquistas</h2>
+          <p class="section-subtitle">Nossa trajetória de sucesso</p>
+        </div>
+        
+        <div class="max-w-4xl mx-auto space-y-8">
+          <!-- Event Timeline Item -->
+          <div class="flex gap-6 items-start group">
+            <div class="flex-shrink-0 w-16 h-16 bg-quarteto-green rounded-full flex items-center justify-center text-quarteto-blue font-bold">
+              <i class="fas fa-running text-2xl"></i>
+            </div>
+            <div class="flex-1 card">
+              <h3 class="text-xl font-bold text-quarteto-green mb-2">57KM Ultra o Rescaldo</h3>
+              <p class="text-sm text-gray-400 mb-3">Junho 2025 | Belém - Mosqueiro, PA</p>
+              <p class="text-gray-300">Em um percurso bastante desafiador, Allan Sousa foi o único representante da equipe no evento e mostrou sua força e superação 
+                para garantir o 2º lugar na categoria 30–39 anos 🥈..</p>
+            </div>
+          </div>
+
+          <div class="flex gap-6 items-start group">
+            <div class="flex-shrink-0 w-16 h-16 bg-quarteto-green rounded-full flex items-center justify-center text-quarteto-blue font-bold">
+              <i class="fas fa-trophy text-2xl"></i>
+            </div>
+            <div class="flex-1 card">
+              <h3 class="text-xl font-bold text-quarteto-green mb-2">1º Corrida de todos</h3>
+              <p class="text-gray-300 mb-3">
+                A equipe brilhou com a conquista do 2º lugar masculino na categoria 30–39 anos 🥈 
+                com Fabiano Duarte se destacando ao registrar o melhor tempo individual da equipe.
+              </p>
+              <p class="text-gray-300">
+                No feminino (30–39 anos), foi dia de ouro! 🥇 
+                Franciene Carvalho subiu ao lugar mais alto do pódio, coroando uma performance impecável.
+              </p>
+              <p class="text-gray-300 mb-3">
+                Mais um grande resultado no feminino (20–29 anos), com a conquista do 2º lugar 🥈 
+                e Mayra Danielle representando a equipe com garra e determinação.
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex gap-6 items-start group">
+            <div class="flex-shrink-0 w-16 h-16 bg-quarteto-green rounded-full flex items-center justify-center text-quarteto-blue font-bold">
+              <i class="fas fa-medal text-2xl"></i>
+            </div>
+            <div class="flex-1 card">
+              <h3 class="text-xl font-bold text-quarteto-green mb-2">Treinão de 9 anos da JR Consultoria</h3>
+              <p class="text-sm text-gray-400 mb-3">Janeiro 2026 | Castanhal, PA</p>
+              <p class="text-gray-300">1º lugar feminino na categoria 20-29 anos. Mayra Danielle conquistou o pódio individual.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-6 items-start group">
+            <div class="flex-shrink-0 w-16 h-16 bg-quarteto-green rounded-full flex items-center justify-center text-quarteto-blue font-bold">
+              <i class="fas fa-flag-checkered text-2xl"></i>
+            </div>
+            <div class="flex-1 card">
+              <h3 class="text-xl font-bold text-quarteto-green mb-2">Corrida Atlética e o Celeiro</h3>
+              <p class="text-sm text-gray-400 mb-3">Dezembro 2025 | KM 21, São Francisco, PA</p>
+              <p class="text-gray-300">1º lugar feminino na categoria 20-29 anos. Mayra Danielle brilhando e conquistando mais um pódio individual.</p>
+              <p class="text-gray-300">1º lugar Masculino na categoria 30-39 anos. Fabiano Duarte conquistou o topo mais alto do pódio.</p>
+              <p class="text-gray-300">3º lugar Masculino na categoria 30-39 anos. Justin conquistando seu lugar no pódio.</p>
+
+            </div>
+          </div>
+          
+          <div class="flex gap-6 items-start group">
+            <div class="flex-shrink-0 w-16 h-16 bg-quarteto-green rounded-full flex items-center justify-center text-quarteto-blue font-bold">
+              <i class="fas fa-star text-2xl"></i>
+            </div>
+            <div class="flex-1 card">
+              <h3 class="text-xl font-bold text-quarteto-green mb-2">Circuito de corrida SESI Pará</h3>
+              <p class="text-sm text-gray-400 mb-3">Novembro 2025 | Castanhal, PA</p>
+              <p class="text-gray-300 mb-3">
+                O pódio masculino (30–39 anos) foi de alto nível! 🏆 
+                Fabiano Duarte conquistou o 1º lugar com grande desempenho, 
+                Allan Sousa garantiu a 2ª colocação e Justin Imports completou o pódio em 3º lugar.
+              </p>
+
+              <p class="text-gray-300">
+                No feminino, o brilho foi ainda mais especial! ✨ 
+                Na categoria 20–29 anos, Mayra Danielle assegurou o 3º lugar. 
+                Já na categoria 30–39 anos, Franciene Carvalho deu um verdadeiro show e alcançou o lugar mais alto do pódio, coroando uma performance incrível!
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Próximos Eventos -->
+        <div class="mt-16 max-w-5xl mx-auto">
+          <h3 class="text-2xl md:text-3xl font-bold text-quarteto-green mb-8 text-center">Próximos Eventos</h3>
+          
+          <div class="relative">
+            <!-- Swiper Container -->
+            <div class="swiper eventsSwiper pb-12">
+              <div class="swiper-wrapper">
+                <!-- Evento 1 -->
+                <div class="swiper-slide">
+                  <div class="card border-2 border-quarteto-green h-full">
+                    <div class="flex items-start gap-4">
+                      <div class="text-quarteto-green">
+                        <i class="fas fa-calendar-alt text-3xl"></i>
+                      </div>
+                      <div>
+                        <h4 class="font-bold text-lg text-quarteto-green mb-1">2º CORRIDA DELE E DELA</h4>
+                        <p class="text-sm text-gray-400 mb-2">22 de Fevereiro de 2026 | Castanhal, PA</p>
+                        <p class="text-sm text-gray-300">Prova de 6km que promete fortes emoções.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Evento 2 -->
+                <div class="swiper-slide">
+                  <div class="card border-2 border-quarteto-green h-full">
+                    <div class="flex items-start gap-4">
+                      <div class="text-quarteto-green">
+                        <i class="fas fa-calendar-alt text-3xl"></i>
+                      </div>
+                      <div>
+                        <h4 class="font-bold text-lg text-quarteto-green mb-1">1º CORRIDA DA MULHER</h4>
+                        <p class="text-sm text-gray-400 mb-2">07 de Março de 2026 | Castnhal, PA</p>
+                        <p class="text-sm text-gray-300">5km que simbolizam superação, coragem e a força transformadora da mulher.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Evento 3 -->
+                <div class="swiper-slide">
+                  <div class="card border-2 border-quarteto-green h-full">
+                    <div class="flex items-start gap-4">
+                      <div class="text-quarteto-green">
+                        <i class="fas fa-calendar-alt text-3xl"></i>
+                      </div>
+                      <div>
+                        <h4 class="font-bold text-lg text-quarteto-green mb-1">1º CORRIDA DA FTB TRI</h4>
+                        <p class="text-sm text-gray-400 mb-2">08 de Março de 2026 | Castanhal, PA</p>
+                        <p class="text-sm text-gray-300">Um desafio de 5km para sair mais forte do que começou.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Evento 4 -->
+                <div class="swiper-slide">
+                  <div class="card border-2 border-quarteto-green h-full">
+                    <div class="flex items-start gap-4">
+                      <div class="text-quarteto-green">
+                        <i class="fas fa-calendar-alt text-3xl"></i>
+                      </div>
+                      <div>
+                        <h4 class="font-bold text-lg text-quarteto-green mb-1">CIRCUITO HB TRAIL RUN</h4>
+                        <p class="text-sm text-gray-400 mb-2">15 de Março de 2026 | Castanhal, PA</p>
+                        <p class="text-sm text-gray-300">15km de conexão com a natureza e superação em cada trecho</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              
+              <!-- Navigation Buttons -->
+              <div class="swiper-button-next !text-quarteto-green after:!text-2xl"></div>
+              <div class="swiper-button-prev !text-quarteto-green after:!text-2xl"></div>
+              
+              <!-- Pagination -->
+              <div class="swiper-pagination !bottom-0"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria de Fotos (Carrossel) -->
+    <section id="galeria" class="py-20 bg-quarteto-blue">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <h2 class="section-title">Galeria de Momentos</h2>
+          <p class="section-subtitle">Reviva nossos melhores momentos nas pistas</p>
+        </div>
+        
+        <div class="max-w-6xl mx-auto">
+          <!-- Grid Gallery -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Image 1 -->
+            <div class="group relative overflow-hidden rounded-xl shadow-lg bg-quarteto-blue-light h-80 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center p-4">
+              <img src="assets/images/imagem-01.jpeg" alt="Quarteto Fantástico - Momento 1" class="max-w-full max-h-full object-contain">
+              <div class="absolute inset-0 bg-gradient-to-t from-quarteto-blue/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+                <div class="p-4 text-white">
+                  <p class="text-sm font-semibold">Momento 1</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Image 2 -->
+            <div class="group relative overflow-hidden rounded-xl shadow-lg bg-quarteto-blue-light h-80 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center p-4">
+              <img src="assets/images/imagem-02.jpeg" alt="Quarteto Fantástico - Momento 2" class="max-w-full max-h-full object-contain">
+              <div class="absolute inset-0 bg-gradient-to-t from-quarteto-blue/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+                <div class="p-4 text-white">
+                  <p class="text-sm font-semibold">Momento 2</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Image 3 -->
+            <div class="group relative overflow-hidden rounded-xl shadow-lg bg-quarteto-blue-light h-80 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center p-4">
+              <img src="assets/images/imagem-03.jpeg" alt="Quarteto Fantástico - Momento 3" class="max-w-full max-h-full object-contain">
+              <div class="absolute inset-0 bg-gradient-to-t from-quarteto-blue/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+                <div class="p-4 text-white">
+                  <p class="text-sm font-semibold">Momento 3</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Image 4 -->
+            <div class="group relative overflow-hidden rounded-xl shadow-lg bg-quarteto-blue-light h-80 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center p-4">
+              <img src="assets/images/imagem-04.jpeg" alt="Quarteto Fantástico - Momento 4" class="max-w-full max-h-full object-contain">
+              <div class="absolute inset-0 bg-gradient-to-t from-quarteto-blue/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+                <div class="p-4 text-white">
+                  <p class="text-sm font-semibold">Momento 4</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Image 5 -->
+            <div class="group relative overflow-hidden rounded-xl shadow-lg bg-quarteto-blue-light h-80 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center p-4">
+              <img src="assets/images/imagem-05.jpeg" alt="Quarteto Fantástico - Momento 5" class="max-w-full max-h-full object-contain">
+              <div class="absolute inset-0 bg-gradient-to-t from-quarteto-blue/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+                <div class="p-4 text-white">
+                  <p class="text-sm font-semibold">Momento 5</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Image 6 -->
+            <div class="group relative overflow-hidden rounded-xl shadow-lg bg-quarteto-blue-light h-80 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center p-4">
+              <img src="assets/images/imagem-06.jpeg" alt="Quarteto Fantástico - Momento 6" class="max-w-full max-h-full object-contain">
+              <div class="absolute inset-0 bg-gradient-to-t from-quarteto-blue/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
+                <div class="p-4 text-white">
+                  <p class="text-sm font-semibold">Momento 6</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Parceiros e Patrocinadores -->
+    <section class="py-20 bg-gradient-to-b from-quarteto-blue-light to-quarteto-blue">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <h2 class="section-title">Parceiros e Apoiadores</h2>
+          <p class="section-subtitle">Empresas que acreditam no nosso potencial</p>
+        </div>
+        
+        <div class="max-w-5xl mx-auto">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Parceiro 1 -->
+            <div class="card h-40 p-4 flex items-center justify-center 
+            hover:border-quarteto-green hover:shadow-xl 
+            transition-all duration-300 group bg-white/5 overflow-hidden">
+              
+            <img src="assets/images/parceiros/imperio-malharia.png" 
+                alt="Império Malharia" 
+                class="max-h-full max-w-full object-contain 
+                        grayscale group-hover:grayscale-0 
+                        transition-all duration-300">
+          </div>
+            
+            <!-- Parceiro 2 -->
+          <div class="card h-40 p-4 flex items-center justify-center
+                      hover:border-quarteto-green hover:shadow-xl 
+                      transition-all duration-300 group bg-white/5 overflow-hidden">
+            <img src="assets/images/parceiros/constru-duarte.png" 
+                alt="Constru Duarte" 
+                class="max-h-full max-w-full object-contain 
+                        grayscale group-hover:grayscale-0 
+                        transition-all duration-300">
+          </div>
+
+          <!-- Parceiro 3 -->
+          <div class="card h-40 p-4 flex items-center justify-center
+                      hover:border-quarteto-green hover:shadow-xl 
+                      transition-all duration-300 group bg-white/5 overflow-hidden">
+            <img src="assets/images/parceiros/junior-gas.png" 
+                alt="Junior Gás" 
+                class="max-h-full max-w-full object-contain 
+                        grayscale group-hover:grayscale-0 
+                        transition-all duration-300">
+          </div>
+
+          <!-- Parceiro 4 -->
+          <div class="card h-40 p-4 flex items-center justify-center
+                      hover:border-quarteto-green hover:shadow-xl 
+                      transition-all duration-300 group bg-white/5 overflow-hidden">
+            <img src="assets/images/parceiros/summer-moda-praia.png" 
+                alt="Summer Moda Praia" 
+                class="max-h-full max-w-full object-contain 
+                        grayscale group-hover:grayscale-0 
+                        transition-all duration-300">
+          </div>
+
+          </div>
+          
+          <div class="text-center mt-12">
+            <a href="https://wa.me/5591988117726" 
+              target="_blank" 
+              class="btn-secondary">
+              Torne-se um Parceiro
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chamada para Ação Final -->
+    <section id="contato" class="py-20 bg-quarteto-blue relative overflow-hidden">
+      <!-- Background decoration -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-quarteto-green rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-quarteto-green rounded-full blur-3xl"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-5xl font-bold mb-6">
+            Faça Parte do <span class="text-quarteto-green">Quarteto Fantástico</span>
+          </h2>
+          <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+            Seja como atleta, patrocinador ou apoiador, queremos você conosco nessa jornada de superação e conquistas!
+          </p>
+          
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            
+            <div class="card text-center">
+              <i class="fas fa-handshake text-4xl text-quarteto-green mb-4"></i>
+              <h3 class="font-bold text-lg mb-2">Seja Patrocinador</h3>
+              <p class="text-sm text-gray-300 mb-4">Associe sua marca a atletas de alto desempenho</p>
+              <a href="https://wa.me/5591988117726" target="_blank" class="text-quarteto-green hover:underline text-sm">
+                Saiba mais
+              </a>
+            </div>
+            
+            <div class="card text-center">
+              <i class="fas fa-heart text-4xl text-quarteto-green mb-4"></i>
+              <h3 class="font-bold text-lg mb-2">Seja Apoiador</h3>
+              <p class="text-sm text-gray-300 mb-4">Acompanhe e apoie nossos treinos e competições</p>
+              <a href="#footer" class="text-quarteto-green hover:underline text-sm">
+                Siga-nos
+              </a>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-quarteto-blue-light py-12 border-t border-quarteto-green/20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <!-- Sobre -->
+          <div>
+            <h3 class="text-quarteto-green font-bold text-lg mb-4">Quarteto Fantástico</h3>
+            <p class="text-gray-400 text-sm mb-4">
+              Equipe de corrida dedicada à superação de limites e conquista de novos horizontes no atletismo.
+            </p>
+            <img src="assets/images/logo-verde.png" alt="Logo" class="w-24 h-auto rounded-lg">
+          </div>
+          
+          <!-- Links Rápidos -->
+          <div>
+            <h3 class="text-quarteto-green font-bold text-lg mb-4">Links Rápidos</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#inicio" class="text-gray-400 hover:text-quarteto-green transition">Início</a></li>
+              <li><a href="#sobre" class="text-gray-400 hover:text-quarteto-green transition">Sobre</a></li>
+              <li><a href="#equipe" class="text-gray-400 hover:text-quarteto-green transition">Equipe</a></li>
+              <li><a href="#eventos" class="text-gray-400 hover:text-quarteto-green transition">Eventos</a></li>
+              <li><a href="#galeria" class="text-gray-400 hover:text-quarteto-green transition">Galeria</a></li>
+            </ul>
+          </div>
+          
+          <!-- Contato e Redes -->
+          <div>
+            <h3 class="text-quarteto-green font-bold text-lg mb-4">Contato</h3>
+            <ul class="space-y-3 text-sm text-gray-400 mb-6">
+              <li class="flex items-center">
+                <i class="fas fa-phone mr-3 text-quarteto-green"></i>
+                (91) 98811-7726
+              </li>
+            </ul>
+            
+            <h4 class="text-quarteto-green font-semibold mb-3">Redes Sociais</h4>
+            <div class="flex space-x-4">
+              <a href="https://www.instagram.com/quartetofantasticocastanhal/" target="_blank" class="w-10 h-10 bg-quarteto-blue rounded-full flex items-center justify-center hover:bg-quarteto-green hover:text-quarteto-blue transition">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" target="_blank" class="w-10 h-10 bg-quarteto-blue rounded-full flex items-center justify-center hover:bg-quarteto-green hover:text-quarteto-blue transition">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" target="_blank" class="w-10 h-10 bg-quarteto-blue rounded-full flex items-center justify-center hover:bg-quarteto-green hover:text-quarteto-blue transition">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" target="_blank" class="w-10 h-10 bg-quarteto-blue rounded-full flex items-center justify-center hover:bg-quarteto-green hover:text-quarteto-blue transition">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="border-t border-quarteto-green/20 pt-8 text-center">
+          <p class="text-gray-500 text-sm">
+            &copy; 2026 Sousa Consultoria. Todos os direitos reservados. 
+            <span class="text-quarteto-green">Feito com paixão pela corrida.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-quarteto-green text-quarteto-blue rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:scale-110 z-40">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <!-- Custom JavaScript -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
