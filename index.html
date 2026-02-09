@@ -540,7 +540,7 @@
               <img src="assets/images/imagem-02.jpeg" alt="Quarteto Fantástico - Momento 2" class="max-w-full max-h-full object-contain">
               <div class="absolute inset-0 bg-gradient-to-t from-quarteto-blue/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end pointer-events-none">
                 <div class="p-4 text-white">
-                  <p class="text-sm font-semibold">Momento 2</p>
+                  <!-- <p class="text-sm font-semibold">Momento 2</p> -->
                 </div>
               </div>
             </div>
@@ -776,6 +776,39 @@
   
   <!-- Custom JavaScript -->
   <script src="js/main.js" defer></script>
+
+    <!-- Modal Lightbox -->
+  <div id="lightbox" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50 p-4">
+    <span id="closeLightbox" class="absolute top-6 right-8 text-white text-4xl cursor-pointer">&times;</span>
+    <img id="lightboxImg" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl">
+  </div>
+
+  <script>
+    const images = document.querySelectorAll("#galeria img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+    const closeLightbox = document.getElementById("closeLightbox");
+
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.remove("hidden");
+        lightbox.classList.add("flex");
+      });
+    });
+
+    closeLightbox.addEventListener("click", () => {
+      lightbox.classList.add("hidden");
+      lightbox.classList.remove("flex");
+    });
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.add("hidden");
+        lightbox.classList.remove("flex");
+      }
+    });
+  </script>
 
 </body>
 </html>
