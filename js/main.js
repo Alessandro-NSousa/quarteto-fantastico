@@ -220,7 +220,7 @@ if (eventsSwiperContainer && eventsSwiper) {
   });
 }
 
-// Initialize Gallery Swiper Carousel
+// Initialize Gallery Swiper Carousel with Coverflow Effect
 const gallerySwiper = new Swiper('.gallerySwiper', {
   // Basic settings
   loop: true,
@@ -230,19 +230,41 @@ const gallerySwiper = new Swiper('.gallerySwiper', {
     disableOnInteraction: false,
   },
   
-  // Responsive breakpoints
-  slidesPerView: 1,
-  spaceBetween: 0,
+  // Coverflow Effect
+  effect: 'coverflow',
+  coverflowEffect: {
+    rotate: 30,
+    stretch: 0,
+    depth: 200,
+    modifier: 1,
+    slideShadows: true,
+  },
+  
+  // Responsive slides per view
+  slidesPerView: 'auto',
+  centeredSlides: true,
+  spaceBetween: 30,
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
   
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.gallerySwiper .swiper-button-next',
+    prevEl: '.gallerySwiper .swiper-button-prev',
   },
   
   // Pagination bullets
   pagination: {
-    el: '.swiper-pagination',
+    el: '.gallerySwiper .swiper-pagination',
     clickable: true,
     dynamicBullets: true,
   },
@@ -253,17 +275,7 @@ const gallerySwiper = new Swiper('.gallerySwiper', {
   },
   
   // Touch settings
-  touchRatio: 1,
-  touchAngle: 45,
   grabCursor: true,
-  
-  // Lazy loading (when using real images)
-  lazy: {
-    loadPrevNext: true,
-  },
-  
-  // Effect
-  effect: 'slide',
   
   // Accessibility
   a11y: {
@@ -274,14 +286,14 @@ const gallerySwiper = new Swiper('.gallerySwiper', {
   },
 });
 
-// Pause autoplay on hover
-const swiperContainer = document.querySelector('.gallerySwiper');
-if (swiperContainer && gallerySwiper) {
-  swiperContainer.addEventListener('mouseenter', () => {
+// Pause gallery carousel on hover
+const gallerySwiperContainer = document.querySelector('.gallerySwiper');
+if (gallerySwiperContainer && gallerySwiper) {
+  gallerySwiperContainer.addEventListener('mouseenter', () => {
     gallerySwiper.autoplay.stop();
   });
   
-  swiperContainer.addEventListener('mouseleave', () => {
+  gallerySwiperContainer.addEventListener('mouseleave', () => {
     gallerySwiper.autoplay.start();
   });
 }
